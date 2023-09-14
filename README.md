@@ -6,12 +6,15 @@
    The node.js library for <a href="https://www.playitsoftware.com/">www.playitsoftware.com</a>.
 </p>
 
+> **Warning**
+> Some API endpoints are currently missing, I'm currently in the process of installing them, and the node package is not yet available
 
 Contents
 =======
  * [Why?](#why)
  * [Installation](#installation)
  * [Example](#installation)
+ * [Want to contribute?](#want-to-contribute)
 
 ### Why?
 ---
@@ -19,8 +22,6 @@ I built the tool primarily for use with the web radio TubeLive.de in order to ea
 
 ### Installation
 --- 
-> **Warning**
-> The node package is not yet available!
 
 ```npm install playitlive-node```
 
@@ -37,3 +38,7 @@ playItLiveApi.getMasterState().then(res => {
 })
 ```
 
+### Want to contribute?
+---
+
+Did I forgot something? No problem, just help us enter the API endpoint!
