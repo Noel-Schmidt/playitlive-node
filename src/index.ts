@@ -202,4 +202,16 @@ export default class PlayItLiveAPI {
             })
         })
     }
+
+    public searchTrackByArtistTitle(artist_title: string): Promise<string> {
+        return new Promise((resolve, reject) => {
+            axios.get(this.apiUrl + `/api/control/tracks/listItems?apiKey=${this.apiKey}&search=${artist_title}&columnIds=artist_title`)
+                .then(response => {
+                    resolve(response.data)
+                }).catch(error => {
+                reject(error);
+            })
+        })
+    }
+
 }

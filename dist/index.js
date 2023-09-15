@@ -6,14 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 class PlayItLiveAPI {
     apiUrl = "";
-    apiToken = "";
-    constructor(apiUrl, apiToken) {
+    apiKey = "";
+    constructor(apiUrl, apiKey) {
         this.apiUrl = apiUrl;
-        this.apiToken = apiToken;
+        this.apiKey = apiKey;
     }
     getSettings() {
         return new Promise((resolve, reject) => {
-            axios_1.default.get(this.apiUrl + `/api/control/settings?apiKey=${this.apiToken}`)
+            axios_1.default.get(this.apiUrl + `/api/control/settings?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -26,7 +26,7 @@ class PlayItLiveAPI {
      */
     getTrack(guid) {
         return new Promise((resolve, reject) => {
-            axios_1.default.get(this.apiUrl + `/api/control/tracks/${guid}?apiKey=${this.apiToken}?apiKey=${this.apiToken}`)
+            axios_1.default.get(this.apiUrl + `/api/control/tracks/${guid}?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -39,7 +39,7 @@ class PlayItLiveAPI {
      */
     getPlayers() {
         return new Promise((resolve, reject) => {
-            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/players?apiKey=${this.apiToken}`)
+            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/players?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -49,7 +49,7 @@ class PlayItLiveAPI {
     }
     getPlayerLevels() {
         return new Promise((resolve, reject) => {
-            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/players/levels?apiKey=${this.apiToken}`)
+            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/players/levels?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -62,7 +62,7 @@ class PlayItLiveAPI {
      */
     getPlayerByIndex(index) {
         return new Promise((resolve, reject) => {
-            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/players/${index}?apiKey=${this.apiToken}`)
+            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/players/${index}?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -75,7 +75,7 @@ class PlayItLiveAPI {
      */
     startPlayer(index) {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/players/${index}/play?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/players/${index}/play?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -88,7 +88,7 @@ class PlayItLiveAPI {
      */
     pausePlayer(index) {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/players/${index}/pause?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/players/${index}/pause?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -101,7 +101,7 @@ class PlayItLiveAPI {
      */
     ejectPlayer(index) {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/players/${index}/eject?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/players/${index}/eject?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -111,7 +111,7 @@ class PlayItLiveAPI {
     }
     getPlayoutMode() {
         return new Promise((resolve, reject) => {
-            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/playoutMode?apiKey=${this.apiToken}`)
+            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/playoutMode?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -121,7 +121,7 @@ class PlayItLiveAPI {
     }
     toggleAutomation() {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/playoutMode/toggleAutomation?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/playoutMode/toggleAutomation?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -131,7 +131,7 @@ class PlayItLiveAPI {
     }
     toggleLogScheduler() {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/playoutMode/toggleLogScheduler?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/playoutMode/toggleLogScheduler?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -141,7 +141,7 @@ class PlayItLiveAPI {
     }
     getMasterState() {
         return new Promise((resolve, reject) => {
-            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/masterControl?apiKey=${this.apiToken}`)
+            axios_1.default.get(this.apiUrl + `/api/control/liveAssist/masterControl?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -151,7 +151,7 @@ class PlayItLiveAPI {
     }
     playTrackAtMaster() {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/masterControl/play?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/masterControl/play?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -161,7 +161,7 @@ class PlayItLiveAPI {
     }
     pauseTrackAtMaster() {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/masterControl/pause?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/masterControl/pause?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -171,7 +171,7 @@ class PlayItLiveAPI {
     }
     stopTrackAtMaster() {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/masterControl/stop?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/masterControl/stop?apiKey=${this.apiKey}`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {
@@ -181,7 +181,17 @@ class PlayItLiveAPI {
     }
     nextTrackAtMaster() {
         return new Promise((resolve, reject) => {
-            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/masterControl/playNext?apiKey=${this.apiToken}`)
+            axios_1.default.post(this.apiUrl + `/api/control/liveAssist/masterControl/playNext?apiKey=${this.apiKey}`)
+                .then(response => {
+                resolve(response.data);
+            }).catch(error => {
+                reject(error);
+            });
+        });
+    }
+    searchTrackByArtistTitle(artist_title) {
+        return new Promise((resolve, reject) => {
+            axios_1.default.get(this.apiUrl + `/api/control/tracks/listItems?apiKey=${this.apiKey}&search=${artist_title}&columnIds=artist_title`)
                 .then(response => {
                 resolve(response.data);
             }).catch(error => {

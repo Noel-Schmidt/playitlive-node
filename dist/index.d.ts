@@ -1,7 +1,7 @@
 export default class PlayItLiveAPI {
     private apiUrl;
-    private apiToken;
-    constructor(apiUrl: string, apiToken: string);
+    private apiKey;
+    constructor(apiUrl: string, apiKey: string);
     getSettings(): Promise<string>;
     /**
      * Get all informations from track
@@ -36,4 +36,5 @@ export default class PlayItLiveAPI {
     pauseTrackAtMaster(): Promise<string>;
     stopTrackAtMaster(): Promise<string>;
     nextTrackAtMaster(): Promise<string>;
+    searchTrackByArtistTitle(artist_title: string): Promise<string>;
 }
