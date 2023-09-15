@@ -7,7 +7,7 @@
 </p>
 
 > **Warning**
-> Some API endpoints are currently missing, I'm currently in the process of installing them, and the node package is not yet available
+> Some API endpoints are currently missing, I'm currently in the process of installing them.
 
 Contents
 =======
