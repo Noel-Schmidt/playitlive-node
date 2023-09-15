@@ -1,18 +1,35 @@
 {
   "name": "playitlive-node",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "A node.js library for playitlive web-api.",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noel-Schmidt/playitlive-node.git"
+  },
   "scripts": {
     "test": "npm run build && node ./test/test.js",
     "build": "tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "nodejs",
+    "radio",
+    "typescript",
+    "playitlive",
+    "radioautomation"
+  ],
+  "author": "Noel Schmidt <me@noel-schmidt.de>",
+  "bugs": {
+    "url": "https://github.com/Noel-Schmidt/playitlive-node/issues"
+  },
+  "homepage": "https://github.com/Noel-Schmidt/playitlive-node",
+  "license": "MIT",
   "dependencies": {
     "axios": "^1.5.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^20.6.0",
     "nodemon": "^3.0.1",
     "typescript": "^5.2.2"
