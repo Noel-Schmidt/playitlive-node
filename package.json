@@ -2,8 +2,8 @@
   "name": "playitlive-node",
   "version": "1.0.1",
   "description": "A node.js library for playitlive web-api.",
-  "main": "./build/index.js",
-  "types": "./build/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Noel-Schmidt/playitlive-node.git"
