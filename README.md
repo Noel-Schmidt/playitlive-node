@@ -43,5 +43,5 @@ playItLiveApi.getMasterState().then(res => {
 
 Did I forgot something? No problem, just help us enter the API endpoint!
 
----
+___
 This GitHub repo is not officially affiliated with PlayItLive
